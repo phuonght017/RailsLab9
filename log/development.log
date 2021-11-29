@@ -1,0 +1,841 @@
+Started GET "/" for 127.0.0.1 at 2021-11-13 23:56:32 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hoangphuong/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hoangphuong/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 518)
+Completed 200 OK in 50ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4379)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-13 20:59:08.098482"], ["updated_at", "2021-11-13 20:59:08.098482"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:25:23 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3160)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/hoangphuong/Documents/IU6-33B Web/lab9/my_app/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 1734ms
+Built at: 11/14/2021 12:25:26 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3394.3ms | Allocations: 17651)
+Completed 200 OK in 3406ms (Views: 3397.0ms | ActiveRecord: 0.0ms | Allocations: 20718)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:25:34 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"34", "commit"=>"Get result"}
+Redirected to 
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2476)
+
+
+  
+NoMethodError (undefined method `home_url' for #<FriendNumController:0x00000000007cb0>):
+  
+app/controllers/friend_num_controller.rb:24:in `block (2 levels) in result'
+app/controllers/friend_num_controller.rb:23:in `result'
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:26:50 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"34", "commit"=>"Get result"}
+Redirected to 
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2310)
+
+
+  
+NoMethodError (undefined method `home_url' for #<FriendNumController:0x000000000081d8>):
+  
+app/controllers/friend_num_controller.rb:24:in `block (2 levels) in result'
+app/controllers/friend_num_controller.rb:23:in `result'
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:31:52 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"34", "commit"=>"Get result"}
+Redirected to 
+Completed 500 Internal Server Error in 4ms (Allocations: 2311)
+
+
+  
+NoMethodError (undefined method `home_url' for #<FriendNumController:0x000000000086d8>):
+  
+app/controllers/friend_num_controller.rb:24:in `block (2 levels) in result'
+app/controllers/friend_num_controller.rb:23:in `result'
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:40:37 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"34", "commit"=>"Get result"}
+Completed 500 Internal Server Error in 5ms (Allocations: 3204)
+
+
+  
+NameError (undefined local variable or method `home_url' for #<FriendNumController:0x000000000097b8>):
+  
+app/controllers/friend_num_controller.rb:24:in `block (2 levels) in result'
+app/controllers/friend_num_controller.rb:23:in `result'
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:40:40 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5401)
+Completed 200 OK in 17ms (Views: 15.5ms | Allocations: 6614)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:40:44 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"12", "commit"=>"Get result"}
+Completed 500 Internal Server Error in 10ms (Allocations: 3165)
+
+
+  
+NameError (undefined local variable or method `home_url' for #<FriendNumController:0x00000000009bf0>):
+  
+app/controllers/friend_num_controller.rb:24:in `block (2 levels) in result'
+app/controllers/friend_num_controller.rb:23:in `result'
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:43:24 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"12", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 420)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:43:24 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2033)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5024)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 5630)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:43:27 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (Allocations: 354)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:43:27 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4909)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 5350)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:44:20 +0300
+Processing by FriendNumController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2000)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4923)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 5463)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:45:20 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5391)
+Completed 200 OK in 13ms (Views: 11.9ms | Allocations: 6595)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:45:45 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 354)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:45:45 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4909)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 5351)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:47:02 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5398)
+Completed 200 OK in 18ms (Views: 16.7ms | Allocations: 6598)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:47:06 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"13", "second_num"=>"23", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 356)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:47:06 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4909)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 5351)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:47:20 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (Allocations: 354)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:47:20 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5391)
+Completed 200 OK in 13ms (Views: 11.3ms | Allocations: 6595)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:47:40 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 360)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:47:40 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5393)
+Completed 200 OK in 12ms (Views: 10.5ms | Allocations: 6598)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:48:01 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5390)
+Completed 200 OK in 13ms (Views: 11.3ms | Allocations: 6590)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:48:03 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (Allocations: 354)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:48:03 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1988)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 4915)
+Completed 200 OK in 7ms (Views: 5.9ms | Allocations: 5358)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:51:18 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4997)
+Completed 200 OK in 10ms (Views: 9.6ms | Allocations: 5624)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:51:22 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"34", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 373)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:51:22 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4909)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 5350)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:53:09 +0300
+Processing by FriendNumController#result as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 353)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:53:09 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5395)
+Completed 200 OK in 11ms (Views: 9.1ms | Allocations: 6599)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:56:06 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 1.1ms | Allocations: 275)
+  Rendered friend_num/result.js.erb (Duration: 2.8ms | Allocations: 655)
+Completed 200 OK in 6ms (Views: 4.5ms | Allocations: 2361)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:57:04 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2016)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5001)
+Completed 200 OK in 10ms (Views: 9.6ms | Allocations: 5628)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:57:06 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"3", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.2ms | Allocations: 51)
+  Rendered friend_num/result.js.erb (Duration: 1.0ms | Allocations: 211)
+Completed 200 OK in 6ms (Views: 2.5ms | Allocations: 789)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:57:09 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"3", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.4ms | Allocations: 206)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 766)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 00:57:49 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2016)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5001)
+Completed 200 OK in 8ms (Views: 7.1ms | Allocations: 5629)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 00:57:52 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"23", "second_num"=>"43", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.2ms | Allocations: 51)
+  Rendered friend_num/result.js.erb (Duration: 1.1ms | Allocations: 211)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 698)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:00:23 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 8354)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 11521)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:00:26 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.5ms | Allocations: 278)
+  Rendered friend_num/result.js.erb (Duration: 2.2ms | Allocations: 673)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2262)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:02:19 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 8354)
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 11521)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:02:32 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 1.9ms | Allocations: 278)
+  Rendered friend_num/result.js.erb (Duration: 6.2ms | Allocations: 673)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 2263)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:02:34 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.5ms | Allocations: 207)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 779)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:02:34 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.4ms | Allocations: 206)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 775)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:04:06 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5400)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 6615)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:04:09 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.8ms | Allocations: 265)
+  Rendered friend_num/result.js.erb (Duration: 2.8ms | Allocations: 637)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2132)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:04:13 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 1.3ms | Allocations: 207)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 779)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:04:13 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.6ms | Allocations: 206)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 770)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:04:13 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.8ms | Allocations: 206)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 771)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:04:13 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.3ms | Allocations: 206)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 770)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:05:48 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 8354)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 11521)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:05:51 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.6ms | Allocations: 278)
+  Rendered friend_num/result.js.erb (Duration: 2.0ms | Allocations: 678)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:08:31 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 8393)
+Completed 200 OK in 24ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 11560)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:08:36 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"43", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered friend_num/result.js.erb (Duration: 2.8ms | Allocations: 740)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2330)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:09:19 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 8395)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 11562)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:09:22 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"33", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.4ms | Allocations: 305)
+  Rendered friend_num/result.js.erb (Duration: 1.2ms | Allocations: 740)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:09:44 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 34.9ms | Allocations: 1991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 4918)
+Completed 200 OK in 56ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 5364)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:09:53 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"284", "second_num"=>"220", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.8ms | Allocations: 242)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 817)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:10:01 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4913)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 5357)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:13:30 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4920)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 5370)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:13:42 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 8394)
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 11561)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:14:23 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"234", "second_num"=>"34", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.9ms | Allocations: 305)
+  Rendered friend_num/result.js.erb (Duration: 2.6ms | Allocations: 740)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:21:39 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 8394)
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 11561)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:22:01 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"12", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.6ms | Allocations: 305)
+  Rendered friend_num/result.js.erb (Duration: 9.7ms | Allocations: 740)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:22:22 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"220", "second_num"=>"284", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.4ms | Allocations: 242)
+Completed 200 OK in 23ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 820)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:26:36 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8394)
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 11704)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:26:43 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"240", "second_num"=>"288", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 1.2ms | Allocations: 305)
+  Rendered friend_num/result.js.erb (Duration: 3.5ms | Allocations: 740)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:27:14 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"220", "second_num"=>"248", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 8.9ms | Allocations: 241)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 808)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 01:28:12 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 8397)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 11564)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:28:16 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"213", "second_num"=>"22", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.5ms | Allocations: 305)
+  Rendered friend_num/result.js.erb (Duration: 2.2ms | Allocations: 740)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:28:22 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"220", "second_num"=>"248", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 8.2ms | Allocations: 241)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 808)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-14 01:29:00 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"220", "second_num"=>"284", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered friend_num/result.js.erb (Duration: 0.7ms | Allocations: 242)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 819)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-18 21:52:49 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4750)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4830)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 10530)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `friend_num_path' for #<ActionView::Base:0x00000000007a30>):
+    10: <body>
+    11:     <h1><%= @title %></h1>
+    12:     <p>Two numbers are called friend if each of them is equal to the sum of all divisors of another, except for this number itself. </p>
+    13:     <%= form_with(url: friend_num_path, method: "post", local: false) do |form|%>
+    14:         <%= form.label :first_num, "Enter your first number: " %>
+    15:         <%= form.text_field :first_num %>
+    16:         <%= form.label :second_num, "Enter your second number: " %>
+  
+app/views/friend_num/home.html.erb:13
+Started GET "/" for 127.0.0.1 at 2021-11-18 21:54:11 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2459)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 7893)
+Completed 200 OK in 20ms (Views: 18.4ms | Allocations: 11123)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-18 21:54:14 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_num"=>"123", "second_num"=>"23", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.5ms | Allocations: 302)
+  Rendered friend_num/result.js.erb (Duration: 1.6ms | Allocations: 715)
+Completed 200 OK in 4ms (Views: 3.1ms | Allocations: 2299)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 00:43:51 +0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2039)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 7504)
+Completed 200 OK in 60ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 13253)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-20 00:43:58 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "num"=>"2000", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.3ms | Allocations: 217)
+  Rendered friend_num/result.js.erb (Duration: 1.1ms | Allocations: 633)
+Completed 200 OK in 257ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 6230)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-29 12:27:47 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7550)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 10720)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-29 12:27:54 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "num"=>"2000", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.6ms | Allocations: 217)
+  Rendered friend_num/result.js.erb (Duration: 3.0ms | Allocations: 633)
+Completed 200 OK in 223ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 6215)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-29 12:56:08 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 7551)
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 10721)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-29 12:56:33 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "num"=>"3000", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered friend_num/result.js.erb (Duration: 1.6ms | Allocations: 642)
+Completed 200 OK in 555ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 8224)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-29 12:57:44 +0300
+Processing by FriendNumController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friend_num/home.html.erb within layouts/application
+  Rendered friend_num/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4079)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 4523)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-29 12:57:51 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "num"=>"3000", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered friend_num/result.js.erb (Duration: 0.3ms | Allocations: 231)
+Completed 200 OK in 560ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 6792)
+
+
+Started POST "/result" for 127.0.0.1 at 2021-11-29 12:58:01 +0300
+Processing by FriendNumController#result as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "num"=>"2000", "commit"=>"Get result"}
+  Rendering friend_num/result.js.erb
+  Rendered friend_num/_result.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered friend_num/result.js.erb (Duration: 0.4ms | Allocations: 219)
+Completed 200 OK in 259ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 4775)
+
+
